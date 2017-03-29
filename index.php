@@ -26,17 +26,47 @@ if (isset($_FILES['css'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="msapplication-config" content="none">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <title>Icomoon Awesome</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .form-control {
+                max-width: 290px;
+            }
+            input[type="file"] {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        </style>
     </head>
     <body>
-        <?php
-            if (!empty($feedback)) {
-                echo '<p>'.$feedback.'</p>';
-            }
-        ?>
-        <form method="post" enctype="multipart/form-data">
-            <label for="zip">Icomoon style.css</label><br>
-            <input type="file" name="css" id="css"><br>
-            <button type="submit">Convert</button>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Icomoon Awesome</h1>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="zip">Icomoon style.css</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="fa fa-file-archive-o" aria-hidden="true"></span></span>
+                                <div class="form-control">
+                                    <input type="file" name="css" id="css">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit"><span class="fa fa-refresh" aria-hidden="true"></span> Convert</button>
+                    </form>
+                    <?php
+                    if (!empty($feedback)) {
+                        echo '<div class="alert alert-danger" role="alert"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span> '.$feedback.'</div>';
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
