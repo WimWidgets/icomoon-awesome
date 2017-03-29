@@ -55,6 +55,7 @@ if (isset($_FILES['css'])) {
                                 <span class="input-group-addon"><span class="fa fa-file-archive-o" aria-hidden="true"></span></span>
                                 <div class="form-control">
                                     <input type="file" name="css" id="css">
+                                    <span></span>
                                 </div>
                             </div>
                         </div>
@@ -68,5 +69,14 @@ if (isset($_FILES['css'])) {
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#css').on('change', function() {
+                    var file = $(this).val().split('\\').pop();
+                    $(this).next().html(file);
+                });
+            });
+        </script>
     </body>
 </html>
