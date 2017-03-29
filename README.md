@@ -18,5 +18,5 @@ Use the LESS files in your project by dropping them in a directory (icomoon for 
 ```
 Everything will work like you are used to with Font Awesome, including all the modifiers (animation, transform, etc.). A few things are changed though.
 * The CSS prefix is `im` instead of `fa`. You can always change this manually to taste.
-* The base font size is `16px` instead of `14px`, because Icomoon works at 16px by default. If you're specific font has another base value, you can change that manually in the LESS file or overwrite it in an external variables file.
+* The base font size is `16px` instead of `14px`, because Icomoon works at 16px by default. If your specific font has another base value, you can change that manually in the LESS file or overwrite it in an external variables file.
 * The font import doesn't include `woff2`, because Icomoon doesn't support that.
