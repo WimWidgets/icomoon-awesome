@@ -45,7 +45,11 @@ class Converter
 
     private function createZip($files)
     {
-        $path = 'output/icomoon-awesome.zip';
+        $dir = 'output';
+        if (!file_exists($this->rootPath.'/'.$dir)) {
+            mkdir($this->rootPath.'/'.$dir, 0777, true);
+        }
+        $path = $dir.'/icomoon-awesome.zip';
         $zip = new \ZipArchive();
         if ($zip->open($this->rootPath.'/'.$path, \ZipArchive::CREATE) !== true) {
             throw new \RuntimeException('Cannot create a zip file.');

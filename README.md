@@ -10,7 +10,7 @@ composer install
 * Select your Icomoon `style.css` from the file input.
 * Click convert.
 ### LESS
-The converter will create a zip package with a the Font Awesome LESS files in the output directory. You will also be prompted for a download of the zip package.
+The converter will create a zip package with a the Font Awesome LESS files in an output directory. You will also be prompted for a download of the zip package.
 
 Use the LESS files in your project by dropping them in a directory (icomoon for example). Create the following import statement in your LESS file.
 ```less
